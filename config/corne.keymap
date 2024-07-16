@@ -21,10 +21,10 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E                 &kp R  &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&lt 1 TAB   &kp A  &kp S  &kp D                 &kp F  &kp G             &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C                 &kp V  &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                          &kp LG(LEFT_CONTROL)  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+&kp ESCAPE  &kp Q  &kp W  &kp E             &kp R  &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&lt 4 TAB   &kp A  &kp S  &kp D             &kp F  &kp G             &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C             &kp V  &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                          &kp LEFT_CONTROL  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -37,10 +37,10 @@
 
             display-name = "Lower";
             bindings = <
-&kp ESCAPE  &trans  &kp N7        &kp N8        &kp N9        &trans            &kp N6     &kp N7        &kp N8    &kp N9     &kp N0  &kp BSPC
-&kp TAB     &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans            &kp LEFT   &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans            &trans     &trans        &trans    &trans     &trans  &trans
-                                  &kp N0        &trans        &kp LEFT_SHIFT    &kp SPACE  &trans        &kp RALT
+&kp ESCAPE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5            &kp N6     &kp N7        &kp N8    &kp N9     &kp N0  &kp BSPC
+&kp TAB     &trans        &trans        &trans        &trans        &trans            &kp LEFT   &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans  &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans            &trans     &trans        &trans    &trans     &trans  &trans
+                                        &trans        &trans        &kp LEFT_SHIFT    &kp SPACE  &trans        &kp RALT
             >;
         };
 
@@ -71,10 +71,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp N7        &kp N8        &kp N9        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &kp N0        &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
@@ -85,6 +85,11 @@
         Layer3 {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+
+        Numpad {
+            if-layers = <0>;
+            then-layer = <4>;
         };
     };
 };
