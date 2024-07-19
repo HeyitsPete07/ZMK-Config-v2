@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp N9 &kp N1 &kp N7 &kp N0 &kp N8 &kp N7 &kp P &kp N1 &kp N7 &kp N9 &kp N8 &kp N4 &kp N0 &kp N5 &kp N0>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -62,17 +71,17 @@
 
         layer_3 {
             bindings = <
-&trans      &kp F1        &kp F2        &kp F3        &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&trans      &trans        &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-                                        &trans        &trans  &trans    &trans  &trans  &trans
+&trans      &kp F1        &kp F2        &kp F3        &kp F4  &kp F5    &kp F6      &kp F7  &kp F8  &kp F9  &kp F10  &kp K_SCREENSAVER
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &new_macro  &trans  &trans  &trans  &trans   &trans
+&trans      &trans        &trans        &trans        &trans  &trans    &trans      &trans  &trans  &trans  &trans   &trans
+                                        &trans        &trans  &trans    &trans      &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
 &trans  &kp N7        &kp N8        &kp N9        &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&mo 4   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                     &kp N0        &trans  &trans    &trans  &trans  &trans
             >;
