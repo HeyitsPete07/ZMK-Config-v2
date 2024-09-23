@@ -89,7 +89,7 @@
 
         Numpad {
             if-layers = <0>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
